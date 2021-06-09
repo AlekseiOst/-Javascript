@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Рассчет стоимости и калорийности гамбургера</title>
+</head>
+<body>
+<div>
+    <form name="hamburger" onsubmit="return false;">
+        <p>Гамбургер</p>
+        <p><input name="hamburgerType" type="radio" checked>Маленький</p>
+        <p><input name="hamburgerType" type="radio">Большой</p>
+        <p>Начинка</p>
+        <p><input name="filling" type="radio" checked>С сыром</p>
+        <p><input name="filling" type="radio">С салатом</p>
+        <p><input name="filling" type="radio">С картофелем</p>
+        <p>Добавки</p>
+        <p><input name="spice" type="checkbox"> посыпать приправой</p>
+        <p><input name="mayonnaise" type="checkbox"> полить майонезом</p>
+<!--        <input type="button" id="calc">-->
+        <button id="calc">Расчитать цену и калории</button>
+    </form>
+    <label id="price-calories"></label>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
