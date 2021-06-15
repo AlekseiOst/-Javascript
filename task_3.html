@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .border-error {
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+<form action="">
+    <p>Имя: <input type="text" id="name"><label></label></p>
+    <p>Телефон: <input type="text" id="phone-number"><label></label></p>
+    <p>E-mail: <input type="text" id="e-mail"><label></label></p>
+    <p>Текст: <input type="text" id="text"><label></label></p>
+    <input type="submit">
+</form>
+<script>
+    let form = document.querySelector('form');
+
+    let name = form.querySelector('#name');
+    let phone_number = form.querySelector('#phone-number');
+    let email = form.querySelector('#e-mail');
+    let text = form.querySelector('#text');
+
+    document.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Валидация имени
+        if (!/^[a-zA-Zа-яА-ЯёЁ]+$/.test(name.value)) {
+            name.classList.add('border-error');
+            name.nextElementSibling.innerHTML = ' Имя содержит только буквы';
+        } else {
+            name.classList.remove('border-error');
+            name.nextElementSibling.innerHTML = '';
+        }
+        // Валидация номера телефона
+        // +7(922)222-2222
+        if (!/^\+7\([\d]{3}\)[\d]{3}-[\d]{4}$/.test(phone_number.value)) {
+            phone_number.classList.add('border-error');
+            phone_number.nextElementSibling.innerHTML = ' Телефон должен имеет вид +7(000)000-0000';
+        } else {
+            phone_number.classList.remove('border-error');
+            phone_number.nextElementSibling.innerHTML = '';
+        }
+        // Валидация e-mail
+        // mymail@mail.ru, или my.mail@mail.ru, или my-mail@mail.ru
+        if (!/^[\w]*[.|-]?[\w]+@[\w]+\.[a-zA-Z]{2,3}$/.test(email.value)) {
+            email.classList.add('border-error');
+            email.nextElementSibling.innerHTML = ' Не верный e-mail';
+        } else {
+            email.classList.remove('border-error');
+            email.nextElementSibling.innerHTML = '';
+        }
+        // Валидация text
+        if (!/.+/.test(text.value)) {
+            text.classList.add('border-error');
+            text.nextElementSibling.innerHTML = ' Введите текст';
+        } else {
+            text.classList.remove('border-error');
+            text.nextElementSibling.innerHTML = '';
+        }
+    })
+</script>
+</body>
+</html>
