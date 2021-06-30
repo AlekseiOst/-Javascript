@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div class="container">
+<div class="container" id="app">
     <div class="header-all">
         <div class="header">
             <a href="index.html">
@@ -44,18 +44,19 @@
             <li class="product-menu-list"><a href="#">CLASSIC</a></li>
         </ul>
         <div class="products-container">
-            <a href="product_details.html" class="products-content"><img src="img/product-11.jpg" alt="product"></a>
-            <a href="product_details.html" class="products-content"><img src="img/product-10.jpg" alt="product"></a>
-            <a href="product_details.html" class="products-content"><img src="img/product-9.jpg" alt="product"></a>
-            <a href="product_details.html" class="products-content"><img src="img/product-8.jpg" alt="product"></a>
-            <a href="product_details.html" class="products-content"><img src="img/product-7.jpg" alt="product"></a>
-            <a href="product_details.html" class="products-content"><img src="img/product-6.jpg" alt="product"></a>
-            <a href="product_details.html" class="products-content"><img src="img/product-11.jpg" alt="product"></a>
-            <a href="product_details.html" class="products-content"><img src="img/product-10.jpg" alt="product"></a>
-            <a href="product_details.html" class="products-content"><img src="img/product-9.jpg" alt="product"></a>
-            <a href="product_details.html" class="products-content"><img src="img/product-8.jpg" alt="product"></a>
-            <a href="product_details.html" class="products-content"><img src="img/product-7.jpg" alt="product"></a>
-            <a href="product_details.html" class="products-content"><img src="img/product-6.jpg" alt="product"></a>
+            <products ref="products"></products>
+<!--            <a href="product_details.html" class="products-content"><img src="img/product-11.jpg" alt="product"></a>-->
+<!--            <a href="product_details.html" class="products-content"><img src="img/product-10.jpg" alt="product"></a>-->
+<!--            <a href="product_details.html" class="products-content"><img src="img/product-9.jpg" alt="product"></a>-->
+<!--            <a href="product_details.html" class="products-content"><img src="img/product-8.jpg" alt="product"></a>-->
+<!--            <a href="product_details.html" class="products-content"><img src="img/product-7.jpg" alt="product"></a>-->
+<!--            <a href="product_details.html" class="products-content"><img src="img/product-6.jpg" alt="product"></a>-->
+<!--            <a href="product_details.html" class="products-content"><img src="img/product-11.jpg" alt="product"></a>-->
+<!--            <a href="product_details.html" class="products-content"><img src="img/product-10.jpg" alt="product"></a>-->
+<!--            <a href="product_details.html" class="products-content"><img src="img/product-9.jpg" alt="product"></a>-->
+<!--            <a href="product_details.html" class="products-content"><img src="img/product-8.jpg" alt="product"></a>-->
+<!--            <a href="product_details.html" class="products-content"><img src="img/product-7.jpg" alt="product"></a>-->
+<!--            <a href="product_details.html" class="products-content"><img src="img/product-6.jpg" alt="product"></a>-->
         </div>
         <!--        <div class="clear-fix"></div>-->
         <!--        <div class="refresh">&#xe802;</div>-->
@@ -137,5 +138,11 @@
     </div>
 </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/ProductComponent.js"></script>
+<script src="js/CartComponent.js"></script>
+<script src="js/FilterComp.js"></script>
+<script src="js/ErrorComp.js"></script>
+<script src="js/main.js"></script>
 
 </html>
