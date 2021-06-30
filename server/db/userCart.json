@@ -1,0 +1,20 @@
+{
+    "amount": 16100,
+    "countGoods": 2,
+    "contents": [
+        {
+            "quantity": 3,
+            "id_product": 3,
+            "product_name": "кресло",
+            "price": 5380,
+            "imgPath": "img/product-3.jpg"
+        },
+        {
+            "quantity": 4,
+            "id_product": 2,
+            "product_name": "кувшин",
+            "price": 12800,
+            "imgPath": "img/product-2.jpg"
+        }
+    ]
+}
