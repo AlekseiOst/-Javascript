@@ -5,12 +5,6 @@ const cart = require('./cartRouter');
 
 app.use(express.json());
 app.use('/', express.static('dist/public'));
-// app.use('/products', express.static('dist/public/products.html'));
-app.get('/products',(req,res) => {
-    res.status(200)
-    res.sendFile(path.join(__dirname, 'dist/public', 'products.html'))
-
-})
 app.use('/api/cart', cart);
 
 app.get('/api/products', (req, res) => {

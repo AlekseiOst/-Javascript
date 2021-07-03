@@ -49,7 +49,8 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader']
             },
             {
-                test: /\.(png|jpe?g|svg|gif)$/,
+                // test: /\.(png|jpe?g|svg|gif)$/,
+                test: /\.(png|jpe?g|svg|gif|eot|ttf|woff|woff2)$/,
                 // use: ['file-loader'],
                 loader: 'file-loader',
                 options: {
@@ -66,6 +67,16 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/public/index.html',
             filename: 'index.html',
+            // excludeChunks: ['server']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'products.html',
+            template: 'src/public/products.html',
+            // excludeChunks: ['server']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'contact.html',
+            template: 'src/public/contact.html',
             // excludeChunks: ['server']
         }),
         new MiniCssExtractPlugin({
